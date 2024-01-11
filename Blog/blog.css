@@ -1,0 +1,170 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    background-color: rgb(136, 86, 236);
+}
+img{
+    height: 560px;
+    width: 90%;
+}
+#myform{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+#myform div{
+    margin: 10px 0px;
+}
+#myform div input{
+    padding: 6px 18px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+#myform h1{
+    color: #fff;
+    margin: 10px 0px;
+    animation: colorfulText 3s infinite;
+}
+@keyframes colorfulText{
+    50%{
+        color: #000;
+    }
+}
+#submit{
+    background-color: aquamarine;
+}
+
+
+
+
+@media only screen and (max-width:320px){
+    .container{
+        display: grid;
+        grid-template-columns: repeat(1,auto);
+        background-color: rgb(136, 86, 236);
+    }
+    img{
+        height: 180px;
+        width: 90%;
+        margin: 20px auto;
+    }
+    #myform{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 0 auto;
+    }
+    #myform div{
+        margin: 10px 0px;
+    }
+    #myform div input{
+        padding: 5px 10px;
+        font-size: 0.6rem;
+    }
+    #myform h1{
+        margin: 20px 0px;
+        font-size: 0.9rem;
+    }
+}
+
+
+
+@media only screen and (min-width:321px) and (max-width:425px){
+    .container{
+        display: grid;
+        grid-template-columns: repeat(1,auto);
+        background-color: rgb(136, 86, 236);
+    }
+    img{
+        height: 180px;
+        width: 90%;
+        margin: 20px auto;
+    }
+    #myform{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 0 auto;
+    }
+    #myform div{
+        margin: 10px 0px;
+    }
+    #myform div input{
+        padding: 5px 10px;
+        font-size: 0.6rem;
+    }
+    #myform h1{
+        margin: 20px 0px;
+        font-size: 1rem;
+    }
+}
+
+
+
+@media only screen and (min-width:426px) and (max-width:768px){
+    .container{
+        display: grid;
+        grid-template-columns: repeat(1,auto);
+        background-color: rgb(136, 86, 236);
+    }
+    img{
+        height: 300px;
+        width: 90%;
+        margin: 20px auto;
+    }
+    #myform{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 0 auto;
+    }
+    #myform div{
+        margin: 10px 0px;
+    }
+    #myform div input{
+        padding: 8px 15px;
+        font-size: 0.8rem;
+    }
+    #myform h1{
+        margin: 20px 0px;
+        font-size: 1.2rem;
+    }
+}
+
+
+
+@media only screen and (min-width:769px) and (max-width:1024px){
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2,auto);
+        background-color: rgb(136, 86, 236);
+    }
+    img{
+        height: 450px;
+        width: 85%;
+        margin: 20px auto;
+    }
+    #myform{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 0 auto;
+    }
+    #myform div{
+        margin: 10px 0px;
+    }
+    #myform div input{
+        padding: 8px 10px;
+        font-size: 0.8rem;
+    }
+    #myform h1{
+        margin: 20px 0px;
+        font-size: 1.3rem;
+    }
+}

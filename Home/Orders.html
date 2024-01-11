@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <title>Order Page</title>
+    <link rel="stylesheet" href="/Navbar/navbar.css">
+    <link rel="stylesheet" href="./Order.css">
+</head>
+<body id="body">
+    <script src="/Navbar/navbar.js"></script>
+
+    <h1>Your Orders</h1>
+    <div id="outercart">
+
+    </div>
+
+    <div class="bottom">
+    <button class="btn" id="btn">
+        <a href="./ProductCheck.html" id="ordernow">Order Now</a>
+    </button>
+    <p class="totalprice"></p>
+</div>
+    <script>
+
+        let StoreData = localStorage.getItem("Data");
+        StoreData = JSON.parse(StoreData);
+   
+        if(StoreData && StoreData.length>0){
+            let Cart = document.getElementById("outercart");
+            let totalprice = 0;
+
+            StoreData.forEach((product,index) =>{
+                let Product = document.createElement("cart");
+                Product.innerHTML = ` 
+                 <div class="cart">
+                    <img src="${product.image}" class="cart-image" alt="" srcset="">
+                    <div class="middle">
+                        <p class="cart-content">${product.title}</p>
+                        <div class="innermiddle">
+                        <p class="quantity">Quality : </p>
+                        <button class="decrease" data-index="${index}">-</button>
+                        <p class="number">1</p>
+                        <button class="increase" data-index="${index}">+</button>
+                    </div>
+                    </div>
+                    <div class="ending">
+                        <p class="cart-price"> Price : $ ${product.price}</p>
+                        <p class="quantity-number"></p>
+                    </div>
+                </div>`;
+                Cart.appendChild(Product);
+            
+            let quantity = 0;
+            let ProductPrice = parseFloat(product.price);
+            Product.querySelector(".increase").addEventListener("click",function(){ 
+                quantity+=1;
+                    totalprice +=ProductPrice;
+                    updateProductDetailes(Product,quantity,totalprice);
+            });
+                
+            Product.querySelector(".decrease").addEventListener("click",function(){ 
+                if(quantity>0){
+                    quantity-=1;
+                    totalprice -=ProductPrice;
+                    updateProductDetailes(Product,quantity,totalprice);
+                }
+            });        
+
+            });
+
+            function updateProductDetailes(Product,quantity,totalprice){
+                Product.querySelector(".number").textContent = quantity;
+                Product.querySelector(".quantity-number").textContent = `Total :  ${quantity}`;
+                T = document.querySelector(".totalprice").textContent = `Total Price: $ ${totalprice.toFixed(2)}`;
+                P = localStorage.getItem("Price");
+                localStorage.setItem("Price",T);
+                let Bottomdiv = document.getElementsByClassName("totalprice")
+                Bottomdiv.innerHTML = P;
+            }
+
+        }else{
+            let noOrders = document.createElement("p");
+            noOrders.setAttribute("style","text-align:center;font-size:1.8rem;margin:100px;font-weight:bold;");
+            noOrders.textContent = "No Product In Order";
+            document.body.appendChild(noOrders);
+            document.getElementById("btn").style.display = "none";
+        }
+
+
+
+    </script>
+    
+</body>
+</html>

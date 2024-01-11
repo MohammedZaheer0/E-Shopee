@@ -1,0 +1,81 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 70px auto;
+    background: linear-gradient(to bottom left, rgb(248, 130, 130), rgb(228, 228, 98), rgb(76, 243, 76), rgb(190, 190, 192), rgb(235, 211, 235));
+    background-size: 200% 200%;
+    animation: color 2s infinite linear;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes color {
+    0% {
+        background-position: 100% 0%;
+    }
+    25% {
+        background-position: 75% 25%;
+    }
+    50% {
+        background-position: 50% 50%;
+    }
+    75% {
+        background-position: 25% 75%;
+    }
+    100% {
+        background-position: 0% 100%;
+    }
+}
+
+.aboutus{
+    text-align: center;
+    margin: 10px;                 
+}
+p{
+    margin: 15px;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+}
+
+
+
+@media only screen and (max-width:320px){
+    .container {
+        width: 90%;
+        margin: 40px auto;
+    }
+    .aboutus{
+        font-size: 1rem;               
+    }
+    p{
+        font-size: 0.7rem;
+    }
+}
+
+@media only screen and (min-width:321px) and (max-width:425px){
+    .container {
+        width: 90%;
+        margin: 40px auto;
+    }
+    .aboutus{
+        font-size: 1.1rem;               
+    }
+    p{
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (min-width:426px) and (max-width:768px){
+    .container {
+        width: 90%;
+        margin: 40px auto;
+    }
+    .aboutus{
+        font-size: 1.2rem;               
+    }
+    p{
+        font-size: 0.9rem;
+    }
+}

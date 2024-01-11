@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="/Navbar/navbar.css">
+    <link rel="stylesheet" href="./Product.css">
+</head>
+<body id="body">
+    <script src="/Navbar/navbar.js"></script>
+
+    <div id="outercart">
+        <div class="cart">
+            <img src="" class="cart-image" alt="" srcset="">
+            <p class="cart-content"></p>
+            <p class="cart-description"></p>
+            <p class="cart-price"></p>
+            <button class="cartbtn">Add To Cart</button>
+        </div>
+    </div>
+
+    <script>
+        
+        const urlParams = new URLSearchParams(window.location.search);  /*ye apne url mai se query stirng bolke rehatha jo ki ? ke baad aate so value usku lete ye */
+        const cartId = urlParams.get('id'); /*ismai apan url ki first value id hai usku lere aur cartId mai sotre karre*/
+
+        async function getCart(){
+            try {
+                let response = await fetch(`https://fakestoreapi.com/products/${cartId}`);  /*this cartId we are accessing from the url */
+                let data = await response.json();
+                store(data);
+            } catch (error) {
+                console.error('Error fetching product details:', error);
+            }
+        }
+        getCart();
+
+        function store(data) {
+            document.querySelector(".cart-image").src = data.image;
+            document.querySelector(".cart-content").textContent = data.title;
+            document.querySelector(".cart-description").textContent = data.description;
+            document.querySelector(".cart-price").textContent = `Price : $ ${data.price}`;
+            document.querySelector(".cartbtn").addEventListener("click",function(){
+                addToCart(data);
+            });
+        }
+
+        function addToCart(data){
+            let StoreData = localStorage.getItem("Data") || "[]";
+            StoreData = JSON.parse(StoreData);
+
+            let ExistingProduct = StoreData.findIndex(item => item.title === data.title)
+            if(ExistingProduct !== -1){
+                StoreData[ExistingProduct].quantity +=1;
+            }else{
+                StoreData.push({
+                    image : data.image,
+                    title : data.title,
+                    price : data.price,
+                    quantity : 1
+                });
+            }
+
+            localStorage.setItem("Data",JSON.stringify(StoreData));
+            window.location.href = "Orders.html";
+        } 
+
+            
+
+            
+
+    </script>
+</body>
+</html>

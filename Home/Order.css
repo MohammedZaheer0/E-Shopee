@@ -1,0 +1,302 @@
+h1{
+    text-align: center;
+    margin: 20px;
+    font-weight: bold;
+}
+.cart{
+    width: 70%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    cursor: pointer;
+    padding: 20px;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    background-color: rgb(250, 248, 248);
+}
+.cart-image{
+    height: 170px;
+    width: 130px;
+    padding: 10px;
+}
+.cart-content{
+    font-size: 1.3rem;
+    margin: 15px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.cart-price{
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+.innermiddle{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+.quantity,.decrease,.number,.increase{
+    margin-right: 10px;
+    padding: 3px 5px;
+}
+.decrease,.increase{
+    font-size: 1rem;
+    font-weight: bold;
+}
+.ending{
+    display: flex;
+    flex-direction: column;
+}
+.bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+.btn{
+    padding: 10px 15px;
+    border: none;
+    background-color: aquamarine;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;    
+}
+.totalprice{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 20px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+@media only screen and (max-width:320px){
+    *{
+        padding:0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+    h1{
+        font-size: 1rem;
+    }
+    .cart{
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(3,auto);
+        padding: 20px 10px;
+    }
+    .cart-image{
+        height: 90px;
+        width: 70px;
+    }
+    .cart-content{
+        font-size: 0.6rem;
+        margin: 15px 5px;
+    }
+    .cart-price{
+        font-size: 0.6rem;
+    }
+    .innermiddle{
+        padding: 10px 5px;
+    }
+    .quantity-number{
+        font-size: 0.7rem;
+    }
+    .quantity,.decrease,.number,.increase{
+        margin-right: 5px;
+        font-size: 0.6rem;
+        padding: 3px;
+    }
+    .decrease,.increase{
+        font-size: 0.6rem;
+    }
+    .btn{
+        padding: 5px 10px;
+        font-size: 0.7rem;
+    }
+    .btn a{
+        font-size: 0.7rem;
+    }
+    .totalprice{
+        font-size: 0.7rem;
+        margin: 20px 5px;
+    }
+}
+
+
+
+
+
+@media only screen and (min-width:321px) and (max-width:425px){
+    *{
+        padding:0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+    h1{
+        font-size: 1rem;
+    }
+    .cart{
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(3,auto);
+        padding: 20px 10px;
+    }
+    .cart-image{
+        height: 90px;
+        width: 70px;
+    }
+    .cart-content{
+        font-size: 0.6rem;
+        margin: 15px 5px;
+    }
+    .cart-price{
+        font-size: 0.6rem;
+    }
+    .innermiddle{
+        padding: 10px 5px;
+    }
+    .quantity-number{
+        font-size: 0.7rem;
+    }
+    .quantity,.decrease,.number,.increase{
+        margin-right: 5px;
+        font-size: 0.6rem;
+        padding: 3px;
+    }
+    .decrease,.increase{
+        font-size: 0.6rem;
+    }
+    .btn{
+        padding: 5px 10px;
+        font-size: 0.7rem;
+    }
+    .btn a{
+        font-size: 0.7rem;
+    }
+    .totalprice{
+        font-size: 0.7rem;
+        margin: 20px 5px;
+    }
+}
+
+
+
+@media only screen and (min-width:426px) and (max-width:768px){
+    *{
+        padding:0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+    h1{
+        font-size: 1.2rem;
+    }
+    .cart{
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(3,auto);
+        padding: 20px 10px;
+    }
+    .cart-image{
+        height: 110px;
+        width: 90px;
+    }
+    .cart-content{
+        font-size: 0.8rem;
+        margin: 15px 5px;
+    }
+    .cart-price{
+        font-size: 0.8rem;
+    }
+    .innermiddle{
+        padding: 10px 5px;
+    }
+    .quantity-number{
+        font-size: 0.8rem;
+    }
+    .quantity,.decrease,.number,.increase{
+        margin-right: 5px;
+        font-size: 0.8rem;
+        padding: 3px;
+    }
+    .decrease,.increase{
+        font-size: 0.8rem;
+    }
+    .btn{
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+    .btn a{
+        font-size: 0.8rem;
+    }
+    .totalprice{
+        font-size: 0.8rem;
+        margin: 20px 5px;
+    }
+}
+
+
+
+@media only screen and (min-width:769px) and (max-width:1024px){
+    *{
+        padding:0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+    h1{
+        font-size: 1.5rem;
+    }
+    .cart{
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(3,auto);
+        padding: 20px 10px;
+    }
+    .cart-image{
+        height: 150px;
+        width: 120px;
+    }
+    .cart-content{
+        font-size: 1rem;
+        margin: 15px 5px;
+    }
+    .cart-price{
+        font-size: 0.9rem;
+    }
+    .innermiddle{
+        padding: 10px 5px;
+    }
+    .quantity-number{
+        font-size: 0.9rem;
+    }
+    .quantity,.decrease,.number,.increase{
+        margin-right: 5px;
+        font-size: 0.9rem;
+        padding: 3px;
+    }
+    .decrease,.increase{
+        font-size: 0.9rem;
+    }
+    .btn{
+        padding: 5px 10px;
+        font-size: 0.9rem;
+    }
+    .btn a{
+        font-size: 0.9rem;
+    }
+    .totalprice{
+        font-size: 0.9rem;
+        margin: 20px 5px;
+    }
+}
