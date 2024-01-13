@@ -18,14 +18,14 @@ P1.addEventListener("click",function(){
     H1Tag.textContent = "Discover New Arrivals";
     PTag.innerHTML = "Browse our latest collection of trendy and fashionable clothing, accessories, and more. Stay up-to-date with the latest fashion trends and find your perfect style.";
     Button.textContent = "Learn More";
-    Image.setAttribute("src","/Home/Images/newarraival-unscreen.gif");
+    Image.setAttribute("src","newarraival-unscreen.gif");
 });
 
 P2.addEventListener("click",function(){
     H1Tag.textContent = "Summer Sale";
     PTag.innerHTML = "Get ready for the summer season with our exclusive summer sale. Enjoy huge discounts on swimwear, beach essentials, and outdoor gear. Don't miss out on the best deals!";
     Button.textContent = "Amazing Deals";
-    Image.setAttribute("src","/Home/Images/summersale.png");
+    Image.setAttribute("src","summersale.png");
 });
 
 
@@ -34,7 +34,7 @@ P3.addEventListener("click",function(){
     H1Tag.textContent = "Free Shipping on All Orders";
     PTag.innerHTML = "Shop with confidence and take advantage of our free shipping offer on all orders. Get your favorite products delivered right to your doorstep without any additional cost.";
     Button.textContent = "Get Started";
-    Image.setAttribute("src","/Home/Images/freeshipping.png");
+    Image.setAttribute("src","freeshipping.png");
 });
 
 
