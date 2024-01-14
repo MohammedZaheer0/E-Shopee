@@ -2,9 +2,11 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+    /* outline: 2px solid red; */
 }
 .container{
     width: 100%;
+    overflow-x: hidden;
 }
 .upperdiv{
     display: flex;
@@ -21,6 +23,8 @@
     justify-content: center;
     align-items: center;
     padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
     /* animation: slide 1.5s 1; */
 }
 .innercontentdiv,.innerimgdiv,.innerbottomdiv{
@@ -28,14 +32,14 @@
 
 }
 @keyframes slide{
-    0%{
-        transform: translateX(-1500px);
+    0% {
+        transform: translateX(-100%);
     }
-    50%{
-        transform: translateX(0px);
+    50% {
+        transform: translateX(0);
     }
-    100%{
-        transform: translateX(0px);
+    100% {
+        transform: translateX(0);
     }
 }
 .innercontentdiv{
@@ -59,7 +63,6 @@
 .innerimgdiv #newarraival{
     width: 300px;
     height: 240px;
-    padding: 15px;
     border-radius: 10px;
     object-fit: cover;
 }
@@ -166,6 +169,7 @@
 @media only screen and (max-width:320px){
     .container{
     width: 100%;
+    overflow-x: hidden;
 }
 .upperdiv{
     width:90%;
@@ -173,71 +177,77 @@
 }
 .innerupperdiv{
     display: grid;
+    padding: 2px;
     grid-template-columns: repeat(2,auto);
 }
 .innercontentdiv{
     display: flex;
     flex-direction: column;
-    width: 90%;
+    width: 95%;
 }
 .h1tag{
-    font-size: 0.9rem;
-}
-.ptag,.learnmore{
     font-size: 0.7rem;
 }
+.ptag,.learnmore{
+    font-size: 0.5rem;
+}
 .learnmore{
-    padding: 10px 5px;
-    width: 100px;
+    padding:5px;
+    width: 70px;
+    font-size: 0.4rem;
 }
 .innerimgdiv #newarraival{
-    width: 140px;
-    height: 110px;
-    padding: 15px 0px;
+    width: 90px;
+    height: 65px;
+    padding: 0px;
 }
 .innerbottomdiv .circle{
     height: 10px;
     width: 10px;
 }
 #carts{
-    width: 85%;
+    width: 80%;
 }
 #h2tag{
     text-align: center;
     margin: 10px;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 #outercart{
     display: grid;
     grid-template-columns: repeat(1,auto);
 }
 .cart{
-    margin: 10px;
+    margin: 10px 5px;
     padding: 15px;
 }
 .cart-image{
-    height: 150px;
-    width: 130px;
+    height: 130px;
+    width: 110px;
     padding: 5px 10px;
 }
 .cart-content{
-    font-size: 0.6rem;
+    font-size: 0.5rem;
 }
 .cart-price{
-    font-size: 0.7rem;
+    font-size: 0.6rem;
 }
 .footerdiv{
-    width: 85%;
+    width: 80%;
     display: grid;
     grid-template-columns: repeat(1,auto);
     padding: 0px 15px;
     text-align: center;
 }
 .footerdiv p{
-    font-size: 0.6rem;
+    font-size: 0.5rem;
 }
 .footerdiv h3{
-    font-size: 0.8rem;
+    font-size: 0.7rem;
+    margin-bottom: 10px;
+}
+.contact h3{
+    margin-top: 10px;
 }
 .aboutus,.contact{
     margin-right: 0px;
@@ -247,7 +257,7 @@
     height: 18px;
 }
 #copy{
-    font-size: 0.7rem;
+    font-size: 0.5rem;
 }
 }
 
@@ -257,6 +267,7 @@
 @media only screen and (min-width:321px) and (max-width:425px){
     .container{
     width: 100%;
+    overflow-x: hidden;
 }
 .upperdiv{
     width:90%;
@@ -282,9 +293,9 @@
     width: 100px;
 }
 .innerimgdiv #newarraival{
-    width: 140px;
-    height: 110px;
-    padding: 15px 0px;
+    width: 125px;
+    height: 100px;
+    padding: 0px;
 }
 .innerbottomdiv .circle{
     height: 10px;
@@ -349,6 +360,7 @@
 @media only screen and (min-width:426px) and (max-width:768px){
     .container{
     width: 100%;
+    overflow-x: hidden;
 }
 .upperdiv{
     width:90%;
@@ -376,7 +388,7 @@
 .innerimgdiv #newarraival{
     width: 180px;
     height: 150px;
-    padding: 15px 10px;
+    padding:0px;
 }
 .innerbottomdiv .circle{
     height: 13px;
@@ -439,6 +451,7 @@
 @media only screen and (min-width:769px) and (max-width:1024px){
     .container{
     width: 100%;
+    overflow-x: hidden;
 }
 .upperdiv{
     width:90%;
@@ -466,7 +479,7 @@
 .innerimgdiv #newarraival{
     width: 180px;
     height: 150px;
-    padding: 15px 10px;
+    padding:0px;
 }
 .innerbottomdiv .circle{
     height: 13px;
